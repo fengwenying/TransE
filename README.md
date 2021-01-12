@@ -3,11 +3,11 @@ Translating Embeddings for Modeling Multi-relational Data
 
 ### Algorithm
 
-![](.\pictures\algorithm.png)
+![](./pictures/algorithm.png)
 
 ### Paper Result
 
-![](.\pictures\result.png)
+![](./pictures/result.png)
 
 ### Running Result
 
