@@ -24,7 +24,7 @@ class TrainSet(Dataset):
         return [self.pos_data[item], self.neg_data[item]]
 
     def load_data(self):
-        raw_data = pd.read_csv(filepath_or_buffer='./WN18/train.txt',
+        raw_data = pd.read_csv(filepath_or_buffer='./FB15k/freebase_mtr100_mte100-train.txt',
                                sep='\t',
                                header=None,
                                names=['head', 'relation', 'tail'],
@@ -95,7 +95,7 @@ class ValidSet(Dataset):
         return self.data[item]
 
     def load_data(self):
-        raw_data = pd.read_csv(filepath_or_buffer='./WN18/valid.txt',
+        raw_data = pd.read_csv(filepath_or_buffer='./FB15k/freebase_mtr100_mte100-valid.txt',
                                sep='\t',
                                header=None,
                                names=['head', 'relation', 'tail'],
@@ -124,7 +124,7 @@ class TestSet(Dataset):
         return self.data[item]
 
     def load_data(self):
-        raw_data = pd.read_csv(filepath_or_buffer='./WN18/test.txt',
+        raw_data = pd.read_csv(filepath_or_buffer='./FB15k/freebase_mtr100_mte100-test.txt',
                                sep='\t',
                                header=None,
                                names=['head', 'relation', 'tail'],

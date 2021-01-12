@@ -7,15 +7,15 @@ from data_prepare import TrainSet, ValidSet, TestSet
 
 class Config:
     def __init__(self):
-        self.device = torch.device('cuda: 1')
+        self.device = torch.device('cuda: 2')
         self.embed_dim = 50
-        self.epoch_num = 800
-        self.batch_size = 128
+        self.epoch_num = 50
+        self.batch_size = 1024
         self.lr = 0.01
         self.margin = 1.0
         self.d_norm = 2
         self.top_k = 10
-        self.valid_epoch = 20
+        self.valid_epoch = 5
 
 
 class Runner:
