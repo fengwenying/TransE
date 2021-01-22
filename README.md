@@ -1,5 +1,9 @@
 ## Paper
-Translating Embeddings for Modeling Multi-relational Data
+**TransE : **Translating Embeddings for Modeling Multi-relational Data
+
+**Year : **2013
+
+**Author : **Antoine Bordes
 
 #### Algorithm
 
@@ -34,3 +38,4 @@ Translating Embeddings for Modeling Multi-relational Data
    在`KG2E`的实现中将整个测试集作为整个`batch`没有爆内存的原因是，计算`MRR`时，是针对每个测试样本单独测试，没有整个`batch`一起操作。
    
 4. 小疑问：验证时候没有将代码包裹在`with torch.no_grad()`内，为什么没有出问题？
+5. `batch size`设置为`1240`时，所需内存约4.8G，主要在验证阶段。

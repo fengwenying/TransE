@@ -10,7 +10,7 @@ class Config:
         self.device = torch.device('cuda: 2')
         self.embed_dim = 50
         self.epoch_num = 50
-        self.batch_size = 1024
+        self.batch_size = 1240
         self.lr = 0.01
         self.margin = 1.0
         self.d_norm = 2
@@ -62,7 +62,7 @@ class Runner:
                 optimizer.zero_grad()
                 loss.backward()
                 optimizer.step()
-            print('epoch {}, loss = {}'.format(epoch + 1, total_loss / len(self.train_set)))
+            print('epoch {}, loss = {:.4}'.format(epoch + 1, total_loss / len(self.train_set)))
 
             if (epoch + 1) % self.config.valid_epoch == 0:
                 self.validate()

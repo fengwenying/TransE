@@ -14,6 +14,7 @@ class TransE(nn.Module):
         self.relation_num = relation_num
         self.d_norm = d_norm
         self.margin = torch.FloatTensor([margin]).to(device)
+        self.device = device
 
         self.entity_embedding = nn.Embedding.from_pretrained(
             torch.empty(entity_num, self.dim).uniform_(-6/math.sqrt(self.dim), 6/math.sqrt(self.dim)), freeze=False)
@@ -43,6 +44,7 @@ class TransE(nn.Module):
                                 torch.norm(pos_distance, p=self.d_norm, dim=1) -
                                 torch.norm(neg_distance, p=self.d_norm, dim=1)))
         return loss
+
 
     def link_predict(self, head, relation, tail, k=10):
         """
