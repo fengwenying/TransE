@@ -1,9 +1,9 @@
 ## Paper
-**TransE : **Translating Embeddings for Modeling Multi-relational Data
+**TransE** : Translating Embeddings for Modeling Multi-relational Data
 
-**Year : **2013
+**Year** : 2013
 
-**Author : **Antoine Bordes
+**Author** : Antoine Bordes
 
 #### Algorithm
 
