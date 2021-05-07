@@ -19,6 +19,13 @@
 
 ## Code
 
+#### Run
+
+```
+python data_prepare.py
+python main.py
+```
+
 #### Running Result
 
 | dataset | dim  | epoch | batch size | lr   | margin | d_norm | Mean Rank       | hits@10(%)         |
